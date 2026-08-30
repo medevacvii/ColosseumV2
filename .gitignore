@@ -1,0 +1,53 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# VS Code
+.vscode/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Build artifacts
+*.pdb
+*.obj
+*.ipch
+*.opensdf
+*.sdf
+
+# Unreal temporary files
+*.tmp
+*.log
+*.bak
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Crash / diagnostic output
+Crashes/
+
+# Local build/package output
+Builds/
+StagedBuilds/
+
+# Do NOT ignore these:
+# Config/
+# Content/
+# Plugins/
+# Source/
+# ColosseumV2.uproject
+# .gitattributes
