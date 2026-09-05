@@ -1,0 +1,89 @@
+# Subject line: aim for ~50 characters
+#         1         2         3         4         5
+#12345678901234567890123456789012345678901234567890
+#                                                 ^ 50
+<type>(<scope>): <short summary>
+
+# Body lines: maximum 72 characters
+#         1         2         3         4         5         6         7
+#123456789012345678901234567890123456789012345678901234567890123456789012
+#                                                                       ^ 72
+
+Why:
+- <Why was this change necessary?>
+
+Changes:
+- <Describe the first important change.>
+- <Describe the second important change.>
+- <Describe the third important change.>
+
+Assets:
+- <Content/...>
+- <Source/...>
+- <Config/...>
+
+Testing:
+- Editor: <tested / not tested>
+- PIE: <tested / not tested>
+- Standalone: <tested / not tested>
+- Packaged build: <tested / not tested>
+
+Notes:
+- <Known issues, dependencies, migrations, or follow-up work.>
+
+
+# -----------------------------------------------------------------------
+# Commit types
+# -----------------------------------------------------------------------
+#
+# feat       New gameplay, system, or content feature
+# fix        Bug fix
+# asset      New or modified Unreal asset
+# level      Map or level changes
+# blueprint  Blueprint-specific changes
+# code       C++ changes
+# material   Materials or shader changes
+# ui         UMG or UI changes
+# audio      Sound or music changes
+# anim       Animation changes
+# config     .ini, project, plugin, or configuration changes
+# build      UnrealBuildTool, targets, modules, or toolchain changes
+# perf       Performance improvements
+# refactor   Restructuring without intended behavior changes
+# test       Tests or test maps
+# docs       Documentation
+# chore      Maintenance or cleanup
+#
+# -----------------------------------------------------------------------
+# Examples
+# -----------------------------------------------------------------------
+#
+# feat(colosseum): add modular outer wall
+#
+# fix(door): correct interaction collision
+#
+# blueprint(jumppad): fix launch behavior
+#
+# asset(seating): revise lower-bowl seating
+#
+# level(arena): update entrance layout
+#
+# build(ue5): update Unreal Build Tool settings
+#
+# config(vs): fix Visual Studio integration
+#
+# -----------------------------------------------------------------------
+# Rules
+# -----------------------------------------------------------------------
+#
+# 1. Keep the subject line around 50 characters when practical.
+# 2. Use the imperative mood:
+#       "add seating system"
+#    not:
+#       "added seating system"
+# 3. Do not end the subject line with a period.
+# 4. Leave one blank line between the subject and body.
+# 5. Wrap body text at no more than 72 characters per line.
+# 6. Explain WHY the change was made, not only WHAT changed.
+# 7. Identify important .uasset, .umap, C++, and config changes.
+# 8. Record how the change was tested.
