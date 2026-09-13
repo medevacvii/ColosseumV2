@@ -164,6 +164,255 @@ stop here.
 
 ---
 
+## UE 5.8.2: Workspace Generator update stops at 51%
+
+Use this section when the Visual Studio Workspace Generator update begins,
+reaches approximately **51%**, and then fails while rebuilding Unreal Build
+Tool. After the failure, Visual Studio continues to report:
+
+```text
+Detected Workspace Generator version: 1.0.0.
+Detected Unreal Engine Version: 5.8.2.
+```
+
+### Typical compiler error
+
+The Unreal Engine Integration output may contain an error similar to:
+
+```text
+error CS7036: There is no argument given that corresponds to the required
+parameter 'Logger' of 'VCToolChain.GetVCIncludePaths(...)'
+```
+
+The percentage itself is not the problem. At roughly 51%, Visual Studio is
+building `UnrealBuildTool.csproj`. The build fails because the Workspace
+Generator patch contains a call written for an older
+`GetVCIncludePaths()` signature.
+
+In UE 5.8.2, the matching overload requires an additional
+`Microsoft.Extensions.Logging.ILogger` argument. Because Unreal Build Tool
+cannot compile, the Workspace Generator update never completes and the
+reported version remains `1.0.0`.
+
+This is an **Unreal Build Tool / Visual Studio patch compatibility problem**.
+It is not fixed by changing the displayed version number, repeatedly clicking
+**Update**, reinstalling the project, or changing `ColosseumV2` source code.
+
+### Step A - Stop retrying the failed update
+
+Save the Visual Studio Output showing the compile error.
+
+Close Unreal Editor. Close Visual Studio before editing engine source. If the
+engine is installed under `C:\Program Files`, use an administrator account for
+the repair.
+
+Do not keep clicking **Update**. The same source error will fail at the same
+build stage until the patched caller is corrected.
+
+### Step B - Locate every `GetVCIncludePaths()` call in Unreal Build Tool
+
+Open **PowerShell as Administrator** and run:
+
+```powershell
+$UE = "C:\Program Files\Epic Games\UE_5.8"
+$UBT = "$UE\Engine\Source\Programs\UnrealBuildTool"
+
+Get-ChildItem $UBT -Recurse -Filter *.cs |
+    Select-String "GetVCIncludePaths\(" |
+    Select-Object Path, LineNumber, Line
+```
+
+The Visual Studio Workspace Generator patch commonly modifies a file under:
+
+```text
+Engine\Source\Programs\UnrealBuildTool\ProjectFiles\VisualStudioWorkspace\
+```
+
+A common affected file is:
+
+```text
+VSWorkspaceProjectFile.cs
+```
+
+Use the compiler error's file name and line number as the final authority.
+Patch layouts can change between Visual Studio releases.
+
+### Step C - Back up the affected source file
+
+Before editing the file, make a backup. For example:
+
+```powershell
+$File = "$UBT\ProjectFiles\VisualStudioWorkspace\VSWorkspaceProjectFile.cs"
+Copy-Item $File "$File.pre-ue582-fix.bak" -Force
+```
+
+If the compiler identified a different file, set `$File` to that exact path.
+
+### Step D - Fix the caller, not the UE 5.8.2 method declaration
+
+Do **not** remove the `ILogger` parameter from `VCToolChain.cs`. UE 5.8.2's
+method declaration is the newer API. The stale Workspace Generator caller is
+what needs to be updated.
+
+Find the failing call. The important change is to pass `Logger` as the final
+argument.
+
+Conceptually, change:
+
+```csharp
+VCToolChain.GetVCIncludePaths(
+    ModuleCompileEnvironment.Platform,
+    WindowsCompiler.VisualStudio2022,
+    null,
+    null)
+```
+
+to:
+
+```csharp
+VCToolChain.GetVCIncludePaths(
+    ModuleCompileEnvironment.Platform,
+    WindowsCompiler.VisualStudio2022,
+    null,
+    null,
+    Logger)
+```
+
+Do not blindly replace the first four arguments. Keep the arguments already
+used by the installed Visual Studio patch and append the required `Logger`
+argument in the position required by UE 5.8.2.
+
+### Step E - If `Logger` is not in scope
+
+Some Workspace Generator patch revisions may also use an older helper method
+that does not receive a logger. If the next compiler error says:
+
+```text
+The name 'Logger' does not exist in the current context
+```
+
+thread the existing logger through the helper rather than creating a fake or
+null logger.
+
+For example, change the helper call from:
+
+```csharp
+ExportModule(ModuleCpp, TargetToolChain, ModuleCompileEnvironment)
+```
+
+to:
+
+```csharp
+ExportModule(ModuleCpp, TargetToolChain, ModuleCompileEnvironment, Logger)
+```
+
+and change the helper signature from:
+
+```csharp
+private static ExportedModuleInfo ExportModule(
+    UEBuildModuleCPP Module,
+    UEToolChain TargetToolChain,
+    CppCompileEnvironment ModuleCompileEnvironment)
+```
+
+to:
+
+```csharp
+private static ExportedModuleInfo ExportModule(
+    UEBuildModuleCPP Module,
+    UEToolChain TargetToolChain,
+    CppCompileEnvironment ModuleCompileEnvironment,
+    ILogger Logger)
+```
+
+Then pass that `Logger` into `GetVCIncludePaths(...)`.
+
+`VSWorkspaceProjectFile.cs` normally already imports:
+
+```csharp
+using Microsoft.Extensions.Logging;
+```
+
+If the affected file does not, add that `using` directive rather than using a
+fully qualified type throughout the file.
+
+### Step F - Rebuild Unreal Build Tool manually
+
+Still in an elevated PowerShell or command prompt, rebuild UBT directly:
+
+```powershell
+dotnet.exe build `
+    "$UE\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj" `
+    -c Development
+```
+
+The important result is:
+
+```text
+Build succeeded.
+```
+
+If it still fails, fix the **first C# compiler error** before doing anything
+else. Do not troubleshoot project targets until `UnrealBuildTool.csproj`
+compiles successfully.
+
+### Step G - Reopen Visual Studio and verify 1.0.1
+
+Reopen `ColosseumV2.uproject` in Visual Studio and go to:
+
+```text
+Project
+  -> Configure Tools for Unreal Engine
+  -> Unreal Build Tool Status
+```
+
+Click **Refresh**.
+
+For the repaired UE 5.8.2 setup, the output should report the newer Workspace
+Generator, for example:
+
+```text
+Detected Workspace Generator version: 1.0.1.
+Detected Unreal Engine Version: 5.8.2.
+Unreal Build Tool Workspace Generator includes latest features.
+```
+
+Then allow Visual Studio to finish preparing the workspace and verify the
+normal Editor target, such as:
+
+```text
+ColosseumV2Editor | Development | Win64
+```
+
+### Step H - If Visual Studio applies the bad patch again
+
+A Visual Studio update, Unreal integration repair, or Epic Games Launcher
+**Verify** can replace modified engine files. If the 51% failure returns:
+
+```text
+1. Re-check the compiler error.
+2. Search for GetVCIncludePaths() again.
+3. Confirm that the final ILogger argument has not been removed.
+4. Reapply the compatibility fix only if the same signature error is present.
+5. Prefer an updated Microsoft/Epic patch once one is available.
+```
+
+Do not automatically reapply this workaround to a later Unreal Engine or
+Visual Studio version. First check the current method signature and the
+actual compiler error; the API may have changed again.
+
+### Quick diagnosis table
+
+| Observation | Meaning |
+|---|---|
+| Update stops near 51% | Visual Studio is rebuilding Unreal Build Tool |
+| `CS7036` mentions `GetVCIncludePaths` and `Logger` | Workspace Generator caller uses an older API signature |
+| Workspace Generator remains `1.0.0` | Update never completed successfully |
+| `dotnet build ... UnrealBuildTool.csproj` succeeds | The source-level compatibility error is repaired |
+| Refresh reports `1.0.1` | Visual Studio is detecting the updated Workspace Generator |
+
+---
+
 ## Manual repair when the Update button does nothing
 
 Use this sequence when Visual Studio continues to detect Workspace Generator
