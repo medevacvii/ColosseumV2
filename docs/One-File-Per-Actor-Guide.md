@@ -57,7 +57,7 @@ The repository includes `L_XRTemplate_Lighting.umap`. Confirm its relationship i
 
 ## 4. Enable separate actor files
 
-For the smallest change to the existing XR map, start with OFPA on a regular level. You do not need to add World Partition merely to save actor instances separately.
+For the smallest change to the existing XR map, start with OFPA on a regular level. You do not need to add World Partition merely to save actor instances separately. If your team expects a larger connected world, follow section 4A before publishing the baseline; it explains adopting World Partition early while delaying runtime streaming.
 
 1. With the new map open, choose **Window > World Settings**.
 2. Search for **Use External Actors**.
@@ -70,6 +70,78 @@ For the smallest change to the existing XR map, start with OFPA on a regular lev
 **If the option is unavailable:** check whether this map already uses World Partition. For a map that needs conversion, Epic provides **Tools > Convert Level**. Perform conversion on the working copy, inspect its handling of existing sublevels, and play-test the resulting map before adopting it. Do not repeatedly convert the original template or assume the output keeps the same filename.
 
 If you choose a World Partition map, start with **World Settings > World Partition > Enable Streaming** disabled for this small prototype. That keeps distance-based runtime streaming out of the first gameplay test while retaining OFPA. It is a starting recommendation, not a performance guarantee for the eventual XR build.
+
+## 4A. Incorporate World Partition, and decide when
+
+### Three separate decisions
+
+| Feature | Job | Proposed ColosseumV2 starting point |
+| --- | --- | --- |
+| One File Per Actor | Separate placed-actor packages for editing | Enable now |
+| World Partition | Organize one persistent world into cells | Adopt early if a larger connected world is planned |
+| Runtime streaming | Load/unload cells during play | Leave off until gameplay works and profiling shows a benefit |
+
+World Partition automatically uses OFPA. Its **Enable Streaming** setting can be off without removing World Partition. Adopting the world structure and enabling distance-based loading are separate milestones.
+
+### When is a good time?
+
+My recommendation for this project is to make the architecture decision **after the first arena/prison blockout works, but before teammates build lots of content on separate branches**.
+
+| Your situation | Recommendation |
+| --- | --- |
+| One compact arena and prison; no expansion planned | OFPA alone may be enough; do not convert just for Git collaboration |
+| Arena, extensive tunnels, exterior grounds and future connected areas planned | Trial World Partition now on a copy, then share one tested baseline |
+| Many active branches already edit the map | Integrate or pause that work first; schedule one coordinated conversion |
+| Memory/loading measurements show the whole world is too expensive | Trial streaming and measure improvement on the actual target device |
+| Frame rate is poor but memory/loading is fine | Profile the cause first; materials, shadows or visible geometry may need different fixes |
+| Gameplay is near a deadline | Avoid an untested conversion unless it solves a demonstrated blocker |
+
+There is no universal actor-count or map-size threshold. Do not turn streaming on simply because the world has a basement. Arena and prison are vertically adjacent; treat that connection as one gameplay transition that must work reliably.
+
+### Incorporate it into the existing map
+
+1. Complete section 3's working copy and commit a recoverable baseline. Leave the original XR template intact.
+2. Agree that one teammate owns conversion. Close Unreal before changing branches.
+3. From the prepared baseline, create `feature/world-partition-setup` with `git switch -c feature/world-partition-setup`.
+4. Reopen Unreal and use **Tools > Convert Level** on the copied main level. Inspect the conversion options/output; preserve the source and do not select source deletion.
+5. Open the converted result. Check its actual name/path rather than assuming it replaced the source map.
+6. Open **World Settings**, find **World Partition**, and turn **Enable Streaming** off for the initial test. Save All.
+7. Use **Window > World Partition > World Partition Editor** for the world overview. When a region is unloaded, drag-select it and choose **Load Region from Selection**.
+8. Compare the converted map against your original blockout: actor positions, lighting, collision, switches, game mode, XR spawning and navigation. Inspect how conversion handled the existing lighting sublevel.
+9. Repeat section 5's two-cube verification in the converted map.
+10. Test the arena-to-prison route and return route. Do this before changing project defaults.
+11. Point the startup/game defaults at the tested result using section 9. Commit all related packages and intended configuration changes together.
+12. Have another teammate test a fresh checkout. Merge one conversion PR before starting new actor-editing branches.
+
+If conversion reports errors, keep the old map as the playable baseline and resolve them on this setup branch. Do not manually move encoded actor packages between map directories.
+
+**For a completely new world:** **File > New Level > Open World** is another starting route. It creates a partitioned world with sample landscape/lighting. Re-establish and test your XR setup before adopting it; creating an Open World map alone does not recreate the XR template's gameplay configuration.
+
+### When to enable runtime streaming later
+
+Treat this as its own small experiment after the basic arena, prison, doors and XR locomotion work:
+
+1. Record a baseline on the target headset/device: memory use, frame time, startup time and any pauses during movement. Use the same route for later comparisons.
+2. Create a separate branch, for example `feature/world-streaming-test`.
+3. Enable **World Settings > World Partition > Enable Streaming** and save.
+4. Confirm a streaming source follows the actual player. Player Controllers supply one by default; verify your custom XR setup has not disabled it.
+5. Start with the map's existing grid configuration. Change one loading setting at a time and repeat the same route. Avoid copying arbitrary grid sizes from an unrelated project.
+6. Test starting in the arena, starting in the prison, opening each trapdoor, descending, returning, respawning and moving quickly across the level.
+7. For a teleport destination outside the currently loaded area, arrange destination preloading and wait for it to finish before moving the player. Test this explicitly; ordinary nearby movement is not a substitute.
+8. Package and test on the target device. Editor Play success alone is insufficient for adopting an XR performance change.
+9. Compare against the recorded baseline. Keep streaming only if the result meets your memory, smoothness and gameplay goals.
+
+**Suggested acceptance rule:** the prison floor and required gameplay actors must be ready before a trapdoor allows entry. Never use an actual player fall as your loading progress indicator.
+
+### Keep these traps out of the plan
+
+- A prison being under the arena does not guarantee the two areas unload independently. Check the chosen runtime partition configuration and actual loaded cells.
+- Keep critical manager actors available when needed. If changing **Is Spatially Loaded**, also consider Runtime Data Layer state: disabling spatial loading does not override a disabled layer.
+- Review references between switches, doors and managers. Direct actor references can couple their loading and make expected memory savings smaller.
+- Outliner folders do not control runtime loading. Runtime Data Layers require a deliberate state-management design; do not make the prison unloadable before its entry/exit logic exists.
+- Streaming cannot resolve two teammates editing the same Blueprint or placed actor. Keep the ownership rules from section 11.
+
+Official implementation details: [Epic's World Partition guide](https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine). The timing, branching sequence and acceptance rules above are project recommendations.
 
 ## 5. Prove OFPA works with two cubes
 
