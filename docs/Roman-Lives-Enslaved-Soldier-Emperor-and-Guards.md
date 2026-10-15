@@ -1,12 +1,12 @@
-# Four lives in first-century Rome
+# Five lives in first-century Rome
 
-Enslaved people, Roman soldiers, the emperor and palace guards — historical context and character guidance for ColosseumV2.
+Enslaved people, Roman soldiers, the emperor, palace guards and prisoners — historical context and character guidance for ColosseumV2.
 
 Compare **Rome in approximately AD 50–68**, during Peter and Paul's later ministry, with **approximately AD 90**, under Domitian. These are broad settings, not identical conditions across the empire. Daily routines below are illustrative reconstructions, not surviving hour-by-hour diaries.
 
 Companions: [culture comparison](Roman-Culture-Apostolic-Era-vs-AD90.md), [historical map guide](First-Century-Colosseum-Recreation-Guide.md).
 
-## 1. First, define the four roles
+## 1. First, define the five roles
 
 | Role | Main distinction | Avoid this shortcut |
 | --- | --- | --- |
@@ -14,6 +14,7 @@ Companions: [culture comparison](Roman-Culture-Apostolic-Era-vs-AD90.md), [histo
 | Roman soldier | A member of a particular military unit, rank and posting | Every soldier is a legionary stationed in Rome |
 | Emperor, often called Caesar | The ruler at the center of imperial patronage, administration and military authority | Julius Caesar rules in the AD 60s or AD 90 |
 | Palace/imperial guard | A security role involving specific units and chains of command | All armed attendants belong to one timeless palace-guard organization |
+| Prisoner | A person held in custody, whose legal status and case must be specified | Every prisoner is enslaved, convicted, a gladiator or awaiting death |
 
 Julius Caesar died in 44 BC. For your earlier Roman setting, identify Claudius before AD 54 or Nero in AD 54–68. Around AD 90, use Domitian. “Caesar” had become part of imperial naming/titulature; its exact use depends on the ruler and context. [L5]
 
@@ -147,7 +148,58 @@ Do not give everyone an identical cinematic black uniform or permanent full batt
 
 **Game scene:** a fictional guard must confirm an escort instruction while a household worker waits with a delivery. Both characters have responsibilities; neither needs to become a combat encounter.
 
-## 6. One event seen by four people
+## 5A. Life as a prisoner
+
+### Custody is not one occupation or legal status
+
+A prisoner might be accused but untried, convicted and awaiting punishment, a captive of war, or held under a particular administrative arrangement. Some were citizens, others non-citizens or already enslaved. Do not make “prisoner” synonymous with “criminal,” “slave” or “Christian.”
+
+Roman public custody generally served detention, coercion or holding people pending proceedings/punishment, rather than the modern model of a standard fixed prison sentence. That does not mean confinement was brief or harmless: delays could be severe. Later penal developments must not automatically be copied into the first century. [L9, L10]
+
+| Situation | How to portray it | What not to assume |
+| --- | --- | --- |
+| Accused person awaiting proceedings | Uncertainty, escorts and dependence on case progress | That accusation establishes guilt |
+| Person awaiting execution or another penalty | A specific sentence and custodial situation | That every prisoner faced death |
+| Guarded residence | Restricted movement and supervision in a residential setting | That every detention occurred in a dungeon |
+| War captive | A separate military/political context | That every captive had the same destination or legal outcome |
+| Person condemned to arena punishment | A specific penalty requiring its own evidence | That all gladiators were condemned prisoners |
+
+### A plausible day in close detention
+
+1. Wait under the conditions imposed by the custodian.
+2. Seek information about a hearing, transfer or decision.
+3. Obtain food, water and basic necessities according to the local arrangement.
+4. Receive assistance or a message if access is permitted.
+5. Endure uncertainty about health, treatment and the case's outcome.
+
+This sequence is an illustrative scene, not a universal roster. Light, ventilation, sanitation, restraints, crowding and access to visitors varied. Do not invent exact meal schedules, guard rotations or cell dimensions and present them as documented practice.
+
+Legal status, money, personal connections and location could affect custody and access to help. Brélaz's study of Paul's provincial imprisonments emphasizes criminal procedure and patronage; it is not proof that a particular Roman prison had the exact layout or routine proposed for the game. [L10]
+
+### Paul, Peter and the evidence
+
+| Evidence | What it supports | What it does not establish |
+| --- | --- | --- |
+| Acts 16:22–40 | A narrated imprisonment at Philippi, including an inner prison and stocks | A standard cell plan for Rome or every other detention |
+| Acts 24:23–27 | Paul's custody at Caesarea, some access to friends and prolonged detention in the narrative | Identical conditions throughout his later career |
+| Acts 28:16, 30–31 | Guarded residence, visitors and teaching in Rome | A Colosseum cell, exact address or later execution scene |
+| Later associations with the Carcer Tullianum/Mamertine Prison | An important Christian commemorative tradition, especially concerning Peter [L11] | Archaeological proof that a particular surviving chamber held Peter or Paul |
+
+Do not merge all Paul's imprisonments into one dungeon. The **Carcer Tullianum is near the Roman Forum, not beneath the Colosseum**. Its traditional associations require a different evidence label from the specific account in Acts 28.
+
+### Comparison with approximately AD 90
+
+Custody, legal hierarchy and uncertainty remain useful background in both periods. The emperor, authorities, political circumstances and individual cases change. An AD 90 Christian prisoner is a possible fictional character, but their existence in your story does not establish a universal Domitianic persecution. Use the cautions in the culture-comparison document.
+
+For your Colosseum, distinguish **temporary holding/backstage spaces** from a documented permanent public prison. Keep the larger underground prison as an explicitly fictional extension. Neither Peter nor Paul can be placed there historically: the amphitheatre opened after their traditional death dates.
+
+### A playable prisoner scene
+
+Create a fictional accused person awaiting a hearing, with a clear statement that guilt has not been established. Their immediate goal is to get a permitted message to someone who can help. The player can learn about uncertainty, status and access without requiring a violent escape or presenting the character's invented case as a historical event.
+
+If showing confinement, include the person's relationships, work, hopes and account of events; the character has a life beyond their custody. Do not make graphic mistreatment mandatory for learning the history.
+
+## 6. One event seen by five people
 
 **Proposed AD 90 scene: an imperial visit to the Colosseum.** This is a fictional composite, not a documented visit on a specified date.
 
@@ -157,6 +209,7 @@ Do not give everyone an identical cinematic black uniform or permanent full batt
 | Assigned soldier | Follow orders and handle a practical duty | Check a route or escort a delivery |
 | Emperor | Public appearance, patronage and political relationships | Observe an audience through an authorized viewpoint |
 | Guard | Protect access and manage an assigned escort | Resolve a mistaken instruction without violence |
+| Prisoner, in a separately labelled fictional custody scene | Learn the status of a case or reach permitted assistance | Deliver an authorized message; do not assume arena punishment |
 
 Do not assume a random frontier legionary was assigned this visit, or that all event staff were enslaved. Select and explain each role.
 
@@ -202,5 +255,11 @@ Separate Scripture, later Christian tradition, historical inference and invented
 **[L7] Metropolitan Museum of Art, Five marble architectural fragments.** Palatine palace development dated AD 81–92. https://www.metmuseum.org/art/collection/search/247174
 
 **[L8] Suetonius, Life of Galba 12.2.** Dissolution of the German bodyguard, with the author's reported explanation. https://lexundria.com/suet_gal/12.2/r
+
+**[L9] Oxford Classical Dictionary, prison.** Public custody and its distinction from routine penal incarceration. https://academic.oup.com/edited-volume/61673/chapter-abstract/550492755
+
+**[L10] Cédric Brélaz, The Provincial Contexts of Paul's Imprisonments: Law Enforcement and Criminal Procedure in the Roman East (2021).** Scholarly analysis of procedure, custodial detention and social connections. https://journals.sagepub.com/doi/10.1177/0142064X21989658
+
+**[L11] Parco archeologico del Colosseo, Carcer Tullianum publication.** Archaeological location and Christian associations. https://colosseo.it/en/pubblicazioni/carcer-tullianum-il-mamertino-al-foro-romano/
 
 Research checked 14 October 2026. Occupational routines, tasks and proposed game scenes are illustrative interpretations. Precise pay, equipment, duty rosters and legal procedures need additional dated research before implementation.
