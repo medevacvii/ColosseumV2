@@ -199,6 +199,64 @@ Create a fictional accused person awaiting a hearing, with a clear statement tha
 
 If showing confinement, include the person's relationships, work, hopes and account of events; the character has a life beyond their custody. Do not make graphic mistreatment mandatory for learning the history.
 
+## 5B. Rights of Roman citizens
+
+### Citizenship mattered, but it was not modern equality
+
+In the first century, being a free inhabitant of the empire did **not** automatically make someone a Roman citizen. Citizenship was a legal status carrying privileges and obligations. Its practical value depended on sex, age, family position, rank, location and the case. A citizen could still be arrested, prosecuted, imprisoned or executed.
+
+Women could be Roman citizens, although they did not enjoy the political participation of citizen men. Non-citizens could also have property, family relationships and access to legal processes: citizenship did not create an absolute divide between people with every right and people with none.
+
+| Area | Benefit or distinction | Important limit |
+| --- | --- | --- |
+| Arrest and punishment | Citizenship could support objections to summary corporal treatment and require different procedure | Not immunity from custody, discipline or lawful punishment |
+| Scourging/interrogation | Paul's citizenship prevents a proposed examination by scourging in Acts 22 | Do not turn this into a claim that no Roman citizen was ever beaten |
+| Appeal | In appropriate proceedings, appeal to imperial authority could be available | Not a universal modern appeal entitlement or automatic personal audience with Caesar |
+| Property and transactions | Access to citizen forms of Roman private law could matter | Non-citizens were not universally forbidden to own property or trade |
+| Marriage and inheritance | Status affected legally recognized marriage, family consequences, wills and inheritance | Sex, family authority and other restrictions still mattered |
+| Public life | Eligible citizen men had a distinct civic status | The first-century empire was not a modern electoral democracy; women and many other people were excluded from offices/political participation |
+| Military opportunities | Citizen status generally enabled legionary recruitment | Age, fitness, recruitment decisions and other qualifications applied |
+
+The table is a first-century orientation, not an exhaustive legal code. Republican rules, later imperial law and modern citizenship rights must not be mixed into one timeless list. For detailed property, family or courtroom scenes, obtain a dated legal reference before assigning a specific entitlement.
+
+### Paul: three useful examples in Acts
+
+| Passage | What happens in the narrative | What the player can learn |
+| --- | --- | --- |
+| Acts 16:35–39 | Paul objects to the public beating and imprisonment of uncondemned Roman citizens; the magistrates become afraid and come to them | A citizen could invoke status after mistreatment; officials might still have acted wrongly |
+| Acts 22:24–29 | Paul challenges the proposed scourging; the commander discusses acquired citizenship, while Paul says he was born a citizen | Citizenship could be acquired or inherited, and its disclosure could change official behavior |
+| Acts 25:9–12; 26:32 | Paul appeals to Caesar and the narrative treats that appeal as affecting the case's next steps | Appeal involves procedure and continued custody, not an instant release |
+
+Use these as specific narrative examples, not proof of every procedural detail throughout the empire. Acts does not say exactly how Paul's family originally obtained citizenship. Do not invent a military ancestor or purchase story and present it as established biography.
+
+### How people could become citizens
+
+- Birth under the applicable citizenship and family-status rules.
+- A grant by Roman authority, to an individual or a wider group.
+- Certain forms of lawful manumission, subject to restrictions. **Not every freedperson automatically acquired full Roman citizenship.**
+- Qualifying military service and an appropriate grant, especially associated with auxiliary veterans. The British Museum documents citizenship as an important reward; conditions and beneficiaries need date-specific checking. [L2, L12]
+
+Do not give all inhabitants universal citizenship in AD 60 or AD 90. Caracalla's much later grant belongs to AD 212, with its own scope and debated exceptions. [L12]
+
+### What citizenship did not guarantee
+
+It did not provide modern freedom of religion, universal voting, equal protection regardless of class, immunity from taxation, protection against every abusive official, or automatic access to the emperor. A poor citizen might struggle to establish status or obtain help. A wealthy non-citizen could still possess influence and resources.
+
+Do not copy later fully developed distinctions between higher- and lower-status punishments mechanically into every first-century scene. Specify the date and relevant legal context.
+
+### AD 60s compared with approximately AD 90
+
+Citizenship remains important in both periods; the new dynasty does not erase the distinction. Individual grants, military careers, officials and political circumstances can change. A person's Roman citizenship and Jewish or Christian identity are separate questions: holding citizenship does not determine their religion or guarantee safety in every religious/political dispute.
+
+### A simple Unreal learning scene
+
+1. Create a fictional detained citizen and a fictional free non-citizen in separate cases.
+2. Give each a reason for detention; avoid implying guilt merely from custody.
+3. Let the player request that an officer check claimed status and the relevant orders.
+4. Show different procedural possibilities without turning citizenship into an automatic Release button.
+5. Add a narration stop comparing the scene with Acts 22 and Acts 25.
+6. Label the encounter and dialogue as a teaching interpretation, not a recovered court record.
+
 ## 6. One event seen by five people
 
 **Proposed AD 90 scene: an imperial visit to the Colosseum.** This is a fictional composite, not a documented visit on a specified date.
@@ -261,5 +319,9 @@ Separate Scripture, later Christian tradition, historical inference and invented
 **[L10] Cédric Brélaz, The Provincial Contexts of Paul's Imprisonments: Law Enforcement and Criminal Procedure in the Roman East (2021).** Scholarly analysis of procedure, custodial detention and social connections. https://journals.sagepub.com/doi/10.1177/0142064X21989658
 
 **[L11] Parco archeologico del Colosseo, Carcer Tullianum publication.** Archaeological location and Christian associations. https://colosseo.it/en/pubblicazioni/carcer-tullianum-il-mamertino-al-foro-romano/
+
+**[L12] British Museum, Legion large-print guide.** Citizenship, veteran privileges and the later AD 212 grant. This exhibition ranges across periods; do not transfer all details unchanged to the first century. https://www.britishmuseum.org/exhibitions/legion-life-roman-army/large-print-guide
+
+**Citizenship narrative evidence:** Acts 16:35–39; 22:24–29; 25:9–12; 26:32. These are specific ancient narrative examples, not a comprehensive Roman law manual. The legal overview deliberately avoids promises of universal rights or protections.
 
 Research checked 14 October 2026. Occupational routines, tasks and proposed game scenes are illustrative interpretations. Precise pay, equipment, duty rosters and legal procedures need additional dated research before implementation.
