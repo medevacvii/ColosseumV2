@@ -2,7 +2,7 @@
 
 A beginner's build guide for ColosseumV2, with historical uses and significant events.
 
-**Recommended target: approximately AD 90, during Domitian's reign.** This suits a working underground backstage area, lifts and trapdoors. An AD 80 opening-day reconstruction is a different historical phase. This guide proposes a playable interpretation, not an archaeological survey. No Unreal assets are created by this document.
+**Project scope: two first-century settings.** Include an apostolic-era Rome chapter, approximately AD 60–68, for the time of Peter and Paul, and a separate Colosseum chapter around AD 90 for the building and its underground machinery. The Colosseum did not exist during their ministries. An AD 80 opening-day reconstruction is a third, optional phase. This guide proposes playable interpretations, not an archaeological survey. No Unreal assets are created by this document.
 
 Companion: [One main map, OFPA and World Partition](One-File-Per-Actor-Guide.md).
 
@@ -10,6 +10,7 @@ Companion: [One main map, OFPA and World Partition](One-File-Per-Actor-Guide.md)
 
 | Version | What to build | What to avoid |
 | --- | --- | --- |
+| Approximately AD 60–68, Peter and Paul's era | Early Christian life in Rome; distinguish pre-fire Rome from Nero's post-AD 64 landscape | Showing Peter or Paul inside the not-yet-built Colosseum |
 | AD 80, opening under Titus | New amphitheatre, intact seating and arena; early underground arrangements | Copying the fully developed surviving masonry hypogeum into opening day |
 | Around AD 90, under Domitian — recommended | Intact amphitheatre plus a plausible masonry backstage system | Claiming all surviving underground walls and lift arrangements belong to this exact year |
 | Modern ruins | Exposed underground masonry, missing arena and damaged outer wall | Presenting today's ruin as its first-century appearance |
@@ -18,7 +19,56 @@ The archaeological park describes wooden underground structures at inauguration,
 
 **Your underground prison:** build the historical area as backstage corridors, holding spaces and machinery. If your game needs a large prison, put it in a clearly labelled **fictional extension**. Its exact cells, torture rooms, escape tunnels and trap locations should not be presented as excavated historical fact.
 
-**First decision:** write `Target year: approximately AD 90` in your project notes. Every teammate uses that same target.
+**First decision:** write `Apostolic chapter: approximately AD 60–68; Colosseum chapter: approximately AD 90` in the project notes. Give each playable scene its own narrower date/phase. Every teammate uses those same boundaries.
+
+## 1A. Include the time of Peter and the Apostle Paul
+
+### The essential chronology
+
+Peter and Paul belong to the generation before the Colosseum opened in AD 80. Christian tradition places their martyrdoms under Nero; exact years are uncertain. The Vatican lists AD 64 or 67 for Peter, and discusses AD 64–68 as the range found in sources for Paul's death. Do not claim they died together on a securely established calendar date. [S9, S10]
+
+| Period | Historical/Biblical context | What your scene should show |
+| --- | --- | --- |
+| Approximately AD 30s–60s | Apostolic ministry, including Peter and Paul; individual dates require separate study | A timeline covering the wider Mediterranean, not an assumption both apostles were always in Rome |
+| Paul's Roman stay, commonly placed in the early AD 60s | Acts 28:16, 23–31 describes guarded residence, visitors and teaching | A modest rented-residence interpretation; no invented address labelled as certain |
+| Before the fire of AD 64 | The later Colosseum has not been built; Nero's post-fire Domus Aurea is also not yet present | A separately researched urban landscape, or keep this neighborhood outside the playable area |
+| After the fire of AD 64, during Nero's remaining reign | Domus Aurea development included an artificial lake in the future Colosseum valley [S11] | A dated lake/palace-landscape interpretation, with uncertain details labelled |
+| Approximately AD 64–68 | Traditional Neronian setting of the apostles' martyrdoms [S9, S10] | A sourced narration distinguishing tradition, evidence and uncertain dates |
+| AD 80 and around AD 90 | Later Flavian amphitheatre phases | The separate Colosseum chapters described in the rest of this guide |
+
+**Important:** “Rome during Peter and Paul” is not one unchanging landscape. Do not place Nero's post-fire lake into a scene set before AD 64. The absence of the Colosseum does not mean this valley was always empty.
+
+### Biblical passages for your tour
+
+| Passage | Use in the experience | Limit on what it establishes |
+| --- | --- | --- |
+| Acts 28:16, 23–31 | Paul's guarded residence, visitors and proclamation in Rome | Does not give the exact house plan or narrate his death |
+| Romans 1:7–15 | Paul's relationship with Christians in Rome and desire to visit | Does not establish a Colosseum connection |
+| Romans 12:1–21 | A study stop on worship, transformed living, service and responding to hostility | A teaching application, not evidence of a particular Roman building |
+| John 21:18–19 | The Gospel's reference to Peter's future death | Does not supply the later detailed account of his Roman execution |
+
+Keep narration based on a selected Bible translation and observe its reuse permissions. Do not write invented apostolic speeches and label them as Scripture.
+
+### Step-by-step: build the earlier chapter
+
+1. Keep the arena map as the later Colosseum chapter. Create a separate map named `L_Rome_Apostolic_60s` using the team's tested XR setup.
+2. Copy reusable project assets through Unreal, retaining their dependencies. Do not copy the Colosseum building into this map.
+3. Start with one small street, one courtyard and a modest interior. These are interpreted settings until supported by specific architectural references.
+4. Make the interior a teaching/meeting stop inspired by Acts 28. Add a guard/visitor arrangement only as a clearly labelled visualization of the passage, not a recovered room.
+5. Add a title card specifying the scene's chosen phase, for example `Rome, early AD 60s — before the Great Fire`.
+6. If you want the future Colosseum valley shown after the fire, create a separate `L_Rome_Neronian_Post64` map. Block out the lake and landscape from suitable plans; do not simply replace the amphitheatre with an identically sized oval pond.
+7. Place a history stop distinguishing the apostles' ministry, Nero's reign, and the later Flavian construction.
+8. Add an explicit chapter transition to `L_Colosseum_Main`, with a new date card: `Approximately AD 90 — a later generation`.
+9. Reuse the HistoryStop interaction pattern from section 15 for short text and replayable narration.
+10. Test each map's spawn, game mode, navigation and chapter transition separately. Include each playable map in your packaging configuration and verify the transition in a packaged build.
+
+Separate maps are the recommended beginner implementation. World Partition handles spatial loading; it does not by itself provide historical-era switching. A later Data Layer design would also need to switch collision, lighting and gameplay correctly, and prevent incompatible eras being active together.
+
+### Martyrdom traditions and prison scenes
+
+If included, identify Peter's Vatican-area martyrdom and Paul's beheading traditions as traditions with their own sources and development. Do not place either execution in the Colosseum. The Basilica of Saint Paul Outside the Walls and modern Saint Peter's Basilica are later monuments, so do not copy them into Nero's Rome. [S9, S10]
+
+A prison scene may be a fictional connective episode. Do not identify a specific cell as Peter's or Paul's on the strength of a generic imprisonment reference. Likewise, the later Colosseum's fictional underground prison must not become the location of their imprisonment through an unnoticed timeline jump.
 
 ## 2. Learn what the building was for
 
@@ -66,6 +116,9 @@ Use centimeters: **100 Unreal units = 1 metre** under the usual centimeter-based
 
 | Feature | Initial blockout target | Unreal measurement | Status |
 | --- | --- | --- | --- |
+| Early AD 60s, approximate | Paul's guarded residence and teaching in Rome, as described in Acts 28 | An interpreted rented-house teaching stop | Biblical account; room design and conventional dating distinguished |
+| AD 64 | Great Fire and subsequent Neronian rebuilding | Before/after timeline and separate post-fire landscape scene | The park dates the Domus Aurea development after the fire [S11] |
+| Approximately AD 64–68 | Traditional setting of Peter and Paul's martyrdoms under Nero | A narration stop in the earlier Rome chapter | Exact years and details require qualification [S9, S10] |
 | Outer long axis | About 189 m | 18,900 cm | Rounded overall envelope [S4] |
 | Outer short axis | About 156 m | 15,600 cm | Rounded overall envelope [S4] |
 | Overall height | About 48 m | 4,800 cm | Initial approximation; verify chosen survey/reference |
@@ -289,5 +342,13 @@ Do not begin by spawning 50,000 skeletal spectators. Start with a small nearby c
 **[S7] Martial, On Spectacles, selections hosted by Pomona College:** Priscus and Verus. Poem numbering varies between editions. Read as an ancient literary source with an imperial patronage context. https://pages.pomona.edu/~cmc24747/sources/martial_selections.htm
 
 **[S8] Parco archeologico del Colosseo, Capitals:** later restorations following the AD 217 fire. https://colosseo.it/en/opere/capitals/
+
+**[S9] Benedict XVI, General Audience, 4 February 2009:** Paul's martyrdom traditions, evidence and uncertain dating under Nero. A Christian institutional presentation; distinguish its discussion of ancient witnesses from later devotional details. https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090204.html
+
+**[S10] Vatican, Peter:** lists AD 64 or 67, illustrating uncertainty rather than establishing one exact date. https://www.vatican.va/content/vatican/en/holy-father/san-pietro.html
+
+**[S11] Parco archeologico del Colosseo, Domus Aurea:** post-AD 64 construction and the artificial lake in the future Colosseum valley. https://colosseo.it/en/area/domus-aurea/
+
+**Biblical primary texts:** Acts 28:16, 23–31; Romans 1:7–15; Romans 12:1–21; John 21:18–19. These support the scriptural content indicated above, not the exact dates or reconstructed architecture.
 
 Research checked 14 October 2026. Building dimensions for final art, bay divisions, seat counts and machinery arrangements require a selected archaeological survey beyond this beginner blockout. Coordinate values, module names, game logic and milestone order are proposed project conventions.
