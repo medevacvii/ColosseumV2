@@ -130,6 +130,137 @@ For religion-related cases, do not invent a single universally enforced AD 90 la
 
 An imperial audience, provincial hearing and city prison are distinct locations. The Colosseum is not the default courthouse, and its fictional basement prison should not become the place where every Roman legal case begins.
 
+## 12. Practical effects in everyday Roman life
+
+The practical question is **“Who can do what, and who can help when something goes wrong?”** Most people encountered government through ordinary transactions, access to resources, local officials and relationships rather than personal meetings with Caesar.
+
+The examples below are fictional teaching situations grounded in the distinctions explained above. They are not recovered cases or exact legal advice for every Roman jurisdiction.
+
+### A. Buying food at a market
+
+**Situation:** a customer believes a seller delivered less grain than agreed.
+
+- Agreement, measurement, witnesses and the parties' resources matter.
+- The first step might be asking the seller to correct the transaction or seeking help locally, rather than initiating a criminal trial.
+- The appropriate official or remedy depends on the market, location, date and nature of the alleged wrong. A disagreement is not automatically fraud.
+
+**Player task:** compare the agreed quantity with the delivery and find a witness. Offer correction, mediation or a request for the appropriate local process; do not make combat the default response.
+
+**Lesson:** law affected small transactions, but enforcement was not identical to modern consumer protection.
+
+### B. Renting a room or workshop
+
+**Situation:** a tenant and landlord disagree about rent, repairs or use of the premises.
+
+- The arrangement and evidence of what was agreed matter.
+- Money, access to advice and help from personal contacts can affect the practical options.
+- A free non-citizen is not automatically unable to rent, trade or bring a dispute. Identify the applicable local/Roman procedure before assigning an exact remedy.
+
+**Player task:** locate a message, witness or account record and help clarify the agreement. Do not invent a modern tenancy board or guarantee modern tenant rights.
+
+**Lesson:** status influenced access and leverage without making every private transaction a direct act of the emperor.
+
+### C. Fetching water
+
+**Situation:** a household worker finds the nearby public basin dry.
+
+- Water maintenance, distribution and access are public concerns with daily consequences.
+- Being a citizen does not mean having a private water connection. Being enslaved does not mean being unable to perform an assigned errand in public.
+- Private access and unauthorized diversion need their own period-specific evidence. A visible valve in the game does not establish a historical right to operate it.
+
+**Player task:** report a fault to the designated maintenance contact, trace the interpreted supply and restore service through an authorized action.
+
+**Lesson:** infrastructure made government tangible through queues, carrying work and reliability. See the [water-system guide](Roman-Water-Systems-History-and-Build-Guide.md) for Frontinus and the model's assumptions.
+
+### D. Working and receiving payment
+
+**Situation:** a free craft worker says an agreed payment has not arrived.
+
+- Free hired work and enslaved labor have different legal foundations.
+- Establish what was agreed and who the parties are. Do not treat an enslaved person's assigned work as a modern employment contract.
+- A patron or intermediary might help obtain an introduction or resolve a dispute, but patronage is not the same as a guaranteed legal entitlement.
+
+**Player task:** carry an account, confirm delivery and identify the person responsible for payment.
+
+**Lesson:** everyday economic life depended on agreements, records, reputation and unequal negotiating power.
+
+### E. Family, inheritance and freedom
+
+**Situation:** a family wants to know what happens after a death, or a household member hopes to be freed.
+
+- Marriage, citizenship, family authority and manumission affect legal outcomes.
+- Women could possess resources and exercise agency, while facing restrictions that differed from men's.
+- Freed status could carry continuing obligations. Do not portray a verbal promise as automatically completing lawful manumission.
+
+**Player task:** deliver a sealed document to an authorized recipient or obtain appropriate advice. Leave the exact outcome conditional on researched status and legal facts.
+
+**Lesson:** family affection, economic control and legally recognized relationships were not always the same thing.
+
+### F. A street disturbance and custody
+
+**Situation:** an argument becomes an alleged assault, and someone is detained.
+
+- Identify the actual arresting authority. A legionary, Praetorian, local official and urban watch member are not interchangeable.
+- Separate accusation from guilt and military intervention from a completed judgment.
+- Citizenship may affect procedure, but does not automatically require release. Witnesses, connections and access to the official can matter.
+
+**Player task:** carry a correct report, locate a witness and request that the relevant status claim be checked.
+
+**Lesson:** the legal system could affect ordinary movement and safety. The narrative in Acts 16 or Acts 22 supplies a comparison, not a universal street-policing script.
+
+### G. Paying a levy or meeting an official demand
+
+**Situation:** an official requests a payment or produces a collection notice.
+
+- Ask which levy, who owes it and who has authority to collect it. Roman taxation was not one identical bill for every inhabitant.
+- Citizenship did not mean exemption from every tax.
+- In an AD 90 Jewish-community scene, the post-AD 70 Jewish tax is a relevant historical difference; do not apply it to everyone or insert it into a pre-AD 70 scene.
+
+**Player task:** verify the notice and help obtain clarification, without assuming that every collector is either honest or corrupt.
+
+**Lesson:** imperial policy could reach a household through local collection. Use the [culture guide](Roman-Culture-Apostolic-Era-vs-AD90.md) for the tax's sources and cautions.
+
+### H. Worship, meals and community relationships
+
+**Situation:** a Christian worker or household member faces expectations involving a meal or religious occasion.
+
+- Public religion, work, family and social networks could overlap.
+- A person's choices might lead to disagreement, suspicion or lost relationships without every incident becoming a formal prosecution.
+- Do not assume one universal rule compelled every person in AD 90 to worship the emperor under pain of immediate execution.
+
+**Player task:** hear different participants' concerns and choose how to communicate respectfully. Label invented dialogue and local consequences as a fictional episode.
+
+**Lesson:** legal danger and social pressure are different, though they can interact. Compare Romans 14–15 and 1 Corinthians 8–10 without treating either as a record of this invented encounter.
+
+## 13. The same problem, different positions
+
+**Example: a delivered parcel is missing.**
+
+| Character | Possible practical concern | Avoid assuming |
+| --- | --- | --- |
+| Enslaved messenger | Being blamed by the person controlling their work | Independent freedom to leave the household or hire representation |
+| Poor citizen customer | Establishing the agreement and obtaining help | Citizenship automatically supplies money, influence or victory |
+| Wealthy free non-citizen | Recovering the delivery through commercial/social connections | No usable law or influence because they are not a citizen |
+| Soldier on duty | Accounting for an assigned delivery through the chain of command | A private dispute permits unrestricted military force |
+| Guard at an entrance | Checking instructions and controlling access | Authority to decide ownership, guilt and punishment on the spot |
+
+These are character possibilities, not predetermined outcomes. The scene should respond to evidence and circumstances as well as status.
+
+## 14. Turn this into a small daily-life experience
+
+1. Build **one block**, with a fountain, market stall, rented room/workshop and a place to contact an official.
+2. Choose one exact historical phase. Reuse a different date-labelled map for AD 90 if comparing periods.
+3. Start with a simple delivery disagreement; add one additional complication, not five simultaneous crimes.
+4. Give each character a task, relationship and relevant status.
+5. Let the player gather information before choosing a route to resolution.
+6. Provide an ordinary non-court outcome where plausible: correction, agreement or referral. Not every dispute needs an imperial hearing.
+7. Explain the distinction between supported history and the game's fictional procedure.
+8. Add replayable audio: **What happened? Why did status matter? What could this person realistically do?**
+
+### Optional biblical reflection
+
+After the historical scene, use Romans 12:9–21 to discuss generosity, hospitality, honor and responses to wrongdoing, or Romans 13:1–7 for obligations toward authorities. Keep reflection separate from the claim that a particular imagined scene happened. Christian ethical instruction is not a substitute for reconstructing Roman law.
+
 ## Sources and further reading
 
 **[G1] Metropolitan Museum of Art, The Flavian Dynasty.** https://www.metmuseum.org/essays/the-flavian-dynasty-69-96
