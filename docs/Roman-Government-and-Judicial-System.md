@@ -33,6 +33,37 @@ The Met's account of Roman administration explains that the Senate continued but
 
 **Working model:** ask who had jurisdiction over this place, this person and this issue. Do not begin by assuming every dispute went straight to Caesar.
 
+## 2A. Did Caesar answer to the Senate?
+
+**Generally, not in the way a modern prime minister answers to Parliament.** During the apostles' era and around AD 90, the emperor held the dominant position. The Senate remained important, but it was not an independent superior authority routinely directing or dismissing him.
+
+### Formal institutions versus practical power
+
+The Principate retained Republican offices and the language of public authority. Senatorial recognition, honors and measures could help express and legitimize imperial rule. That institutional framework mattered; it was not the same as modern parliamentary accountability.
+
+| Question | Practical answer for these periods |
+| --- | --- |
+| Could senators debate, advise and conduct public business? | Yes. The Senate continued to function. |
+| Did the Senate have judicial responsibilities? | Yes, in certain matters; it was not the court for every case. |
+| Did the emperor benefit from senatorial cooperation? | Yes. Senators supplied expertise, prestige, administrators and commanders. |
+| Could the Senate routinely remove him with a vote of no confidence? | No. There was no comparable regular parliamentary mechanism. |
+| Could senators oppose him? | Yes, but opposition could carry serious political and personal risks. |
+| Was the emperor free of every constraint? | No. Military loyalty, finances, elite cooperation, public expectations and succession politics affected his room to act. |
+
+Formal senatorial action against an emperor could occur during a political collapse, but that should not be confused with an ordinary, reliably enforceable constitutional check. Ask who controlled armed support and who could make a decision effective, not merely who announced it.
+
+### Domitian around AD 90
+
+The Met describes tensions between Domitian and the Senate, including his preference for some equestrian officers and his increasingly coercive rule. His reign included executions of prominent people and ended in assassination in AD 96. [G1]
+
+Do not move every incident from the end of his reign into AD 90. Nor should a hostile ancient account become proof that every senator opposed him or every Senate meeting was meaningless.
+
+### How to show this in the game
+
+Build a fictional consultation in which senators offer advice, negotiate resources or raise objections while imperial officials control access and communicate the emperor's decision. Show disagreement through formal speech, alliances and private conversations rather than a modern parliamentary confidence vote.
+
+The useful character tension is: **the emperor commands enormous authority, yet still depends on people whose cooperation he cannot take entirely for granted**. Label the dialogue and specific dispute as fictional unless based on a documented episode.
+
 ## 3. Rome, Italy and the provinces were not identical
 
 In Rome, magistrates, prefects, the Senate and emperor could be relevant in different matters. In provincial cities, a mixture of local authorities and a Roman governor operated. Some communities retained particular privileges and legal traditions.
